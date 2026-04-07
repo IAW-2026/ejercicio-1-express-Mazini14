@@ -1,13 +1,32 @@
 const express = require('express');
+const path = require('path');
 const app = express();
 
 // Middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Ruta raíz
+// Servir archivos estáticos desde la carpeta 'public'
+app.use(express.static('public'));
+
+// Ruta: Página Principal
 app.get('/', (req, res) => {
-  res.send('Hola mundo!');
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
+
+// Ruta: Acerca de
+app.get('/acerca', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'acerca.html'));
+});
+
+// Ruta: Contacto
+app.get('/contacto', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'contacto.html'));
+});
+
+// Ruta no encontrada (404)
+app.use((req, res) => {
+  res.status(404).sendFile(path.join(__dirname, 'public', '404.html'));
 });
 
 // Middleware básico para manejo de errores

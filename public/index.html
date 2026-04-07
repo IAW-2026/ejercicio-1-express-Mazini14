@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio - Mi Sitio Web</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🏠 Página Principal</h1>
+            <p>Bienvenido a mi sitio web con múltiples rutas Express</p>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="/" class="active">Inicio</a></li>
+                <li><a href="/acerca">Acerca de</a></li>
+                <li><a href="/contacto">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <section class="hero">
+                <h2>¡Bienvenido!</h2>
+                <p>
+                    Este sitio demuestra cómo Express.js puede servir múltiples rutas 
+                    y conectar diferentes páginas HTML entre sí.
+                </p>
+            </section>
+
+            <section class="features">
+                <h2>✨ Características del Sitio</h2>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h3>📝 Rutas Múltiples</h3>
+                        <p>Navega entre diferentes páginas utilizando rutas Express bien definidas.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>🎨 Diseño Responsivo</h3>
+                        <p>El sitio se visualiza correctamente en cualquier dispositivo.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>🔗 Navegación Integrada</h3>
+                        <p>Accede fácilmente a todas las secciones desde cualquier página.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>📦 Archivos Estáticos</h3>
+                        <p>Estilos CSS y JavaScript servidos desde la carpeta public.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="cta">
+                <h2>🚀 Comienza a Explorar</h2>
+                <p>Usa el menú de navegación para visitar las diferentes secciones del sitio:</p>
+                <div class="button-group">
+                    <a href="/acerca" class="btn btn-primary">Conocer Más</a>
+                    <a href="/contacto" class="btn btn-secondary">Contacto</a>
+                </div>
+            </section>
+
+            <section class="info">
+                <h2>📖 Cómo Funciona</h2>
+                <p>
+                    Este servidor utiliza <strong>express.static()</strong> para servir archivos estáticos 
+                    (CSS, JavaScript) y rutas GET para servir cada página HTML:
+                </p>
+                <ul>
+                    <li><code>GET /</code> → Sirve index.html</li>
+                    <li><code>GET /acerca</code> → Sirve acerca.html</li>
+                    <li><code>GET /contacto</code> → Sirve contacto.html</li>
+                </ul>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 Mi Sitio Web - Ejercicio de Múltiples Rutas Express</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
