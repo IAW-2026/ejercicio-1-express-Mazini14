@@ -5,9 +5,12 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Ruta raíz
+// Servir archivos estáticos desde la carpeta 'public'
+app.use(express.static('public'));
+
+// Ruta raíz (opcional, ya que index.html será servido automáticamente)
 app.get('/', (req, res) => {
-  res.send('Hola mundo!');
+  res.sendFile(__dirname + '/public/index.html');
 });
 
 // Middleware básico para manejo de errores
