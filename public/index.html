@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Página con Express</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-content">
+            <h1 class="logo">Mi Sitio Web</h1>
+            <ul class="nav-menu">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#acerca">Acerca de</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero" id="inicio">
+        <div class="hero-content">
+            <h2>Bienvenido a mi sitio</h2>
+            <p>Una página creada con Express.js y diseño personalizado</p>
+            <button class="btn-primary">Explorar</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="features">
+            <h3>Características</h3>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h4>Rápido</h4>
+                    <p>Servidor Express optimizado y eficiente</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎨</div>
+                    <h4>Elegante</h4>
+                    <p>Diseño moderno y responsivo</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h4>Seguro</h4>
+                    <p>Prácticas de seguridad implementadas</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="about" id="acerca">
+            <h3>Acerca de este proyecto</h3>
+            <p>
+                Este proyecto integra HTML, CSS y un servidor Express.js. 
+                Demuestra cómo servir archivos estáticos desde una aplicación de Node.js 
+                y crear una experiencia web completa y profesional.
+            </p>
+        </section>
+
+        <section class="contact" id="contacto">
+            <h3>Ponerse en contacto</h3>
+            <form class="contact-form">
+                <input type="text" placeholder="Tu nombre" required>
+                <input type="email" placeholder="Tu correo" required>
+                <textarea placeholder="Tu mensaje" rows="5" required></textarea>
+                <button type="submit" class="btn-primary">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Mi Sitio Web. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
